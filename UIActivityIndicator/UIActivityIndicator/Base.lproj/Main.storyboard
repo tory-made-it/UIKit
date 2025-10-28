@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIActivityIndicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rps-L6-KPS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="749"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LjA-la-wFS">
+                                <rect key="frame" x="0.0" y="808" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="KnK-rV-nto">
+                                        <color key="tintColor" systemColor="tableBackgroundColor"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="BYZ-38-t0r" id="vfM-kg-afl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="AcQ-gk-29H"/>
+                                    <barButtonItem systemItem="fastForward" id="MOl-Rh-LnJ">
+                                        <color key="tintColor" systemColor="tableBackgroundColor"/>
+                                        <connections>
+                                            <action selector="forwardAction:" destination="BYZ-38-t0r" id="oPb-Ji-IA6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zHf-Cx-yvp"/>
+                                    <barButtonItem systemItem="refresh" id="jrs-f0-iPv">
+                                        <color key="tintColor" systemColor="tableBackgroundColor"/>
+                                        <connections>
+                                            <action selector="refreshAction:" destination="BYZ-38-t0r" id="nbM-2J-uuw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" systemColor="systemPinkColor"/>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rps-L6-KPS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6rr-4G-DnR"/>
+                            <constraint firstItem="rps-L6-KPS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Clg-CI-PTH"/>
+                            <constraint firstItem="rps-L6-KPS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NpZ-iC-jRF"/>
+                            <constraint firstAttribute="bottom" secondItem="rps-L6-KPS" secondAttribute="bottom" constant="44" id="Rs1-HS-zEA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="KnK-rV-nto" id="CJ8-J5-J5S"/>
+                        <outlet property="forward" destination="MOl-Rh-LnJ" id="2eo-rz-HSy"/>
+                        <outlet property="web" destination="rps-L6-KPS" id="nlW-Tx-PYK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
